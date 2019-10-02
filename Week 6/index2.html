@@ -104,7 +104,12 @@
 
   <script>
       document.getElementById("mainTitle").style.color="rebeccapurple";
+      var colorButton = document.getElementById("colorChange");
+      colorButton.addEventListener("click",changeColor);
       
+      var changeColor = function(){
+          document.getElementById("mainTitle").style.color = "dodgerblue";
+      }
   </script>
   </body>
 </html>
