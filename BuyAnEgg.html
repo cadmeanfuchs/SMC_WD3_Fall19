@@ -53,7 +53,24 @@
         <div class="col-1"></div>
           <div class="col-10">
           <p style="margin: 15vh;">Have you ever wanted to own the world's loveliest egg?  Well, at last we have it.  We boiled it up and wrapped it in gold, just for you.  And now you'll be charged $199 for your chance to fondle it gently.</p>
-          <form class="needs-validation" novalidate>
+          <div class="col-1"></div>
+        <div class="row">
+            <div class="col-4"></div>
+            <div class="col-4"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#eggModal">Order This Awesome Egg</button></div>
+            <div class="col-4"></div></div>
+              
+              
+          <div class="modal fade" id="eggModal" tabindex="-1" role="dialog" aria-labelledby="eggOrderForm" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle">The Eggsploitation of the Proletariat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="needs-validation" novalidate>
               <div class="form-row">
                 <div class="formg-group col-md-12"><h3>Credentials</h3></div>
                 <div class="form-group col-md-6">
@@ -173,10 +190,18 @@
                 </div>
               </div>
               <button type="submit" class="btn btn-primary">Egg Me</button>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Abandon Joy</button>
             </form>
+              </div>
+              <div class="modal-footer">
+              </div>
+            </div>
+          </div>
+        </div>
             </div>
     </div>
     <div class="col-1"></div>
+    
           
 
     </div>
@@ -238,6 +263,12 @@
             });
           }, false);
         })();
+    </script>
+      
+    <script>
+        $('#myModal').on('shown.bs.modal', function(){
+            $('#myInput').trigger('focus')
+        })
     </script>
   </body>
 </html>
