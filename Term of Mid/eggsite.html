@@ -64,12 +64,14 @@
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLongTitle">The Eggsploitation of the Proletariat</h5>
+                <h2 class="modal-title" id="exampleModalLongTitle">Curds You Can't Abandon</h2>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                   <span aria-hidden="true">&times;</span>
                 </button>
               </div>
               <div class="modal-body">
+                <div class="row"><p>Boil 'em, hash 'em, stick 'em in a dough, Eggs are the friends you'll always know.  They're our closest companions and dankest dish.  Hell, we were all eggs once.<br>But staying atop all the cracking egg news can be hard.  Only by subscribing today will you ever reach a true and lasting wisdom, guided by our foxy little team.  Join now, and we'll scramble you up!</p>
+                </div>
                 <form class="needs-validation" novalidate>
               <div class="form-row">
                 <div class="formg-group col-md-12"><h3>Credentials</h3></div>
@@ -262,10 +264,10 @@
         })();
     </script>
       
-    <script>
-        $('#eggModal').on('shown.bs.modal', function(){
-            $('#myInput').trigger('focus')
-        })
-    </script>
+<script type="text/javascript">
+    $(window).on('load',function(){
+        $('#eggModal').modal('show');
+    });
+</script>
   </body>
 </html>
