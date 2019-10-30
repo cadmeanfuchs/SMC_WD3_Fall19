@@ -1,0 +1,83 @@
+* {
+    font-family: neuzeit-grotesk, sans-serif;
+    font-style: normal;
+    font-weight: 200; 
+}
+
+.jumbotron {
+        background-image: radial-gradient(farthest-corner, rgb(250, 181, 188) -20%, rgb(249,167,118) 0%, rgb(246,144,97)20%, rgb(244,120,87)80%,rgb(214,91,70)100%);
+    color: ghostwhite;
+}
+
+.field{
+    min-height: 90vh;
+    background-color: hsl(22, 90%, 70%);
+    margin: 0;
+    padding: 5%;
+    margin-bottom: 10vh;
+}
+
+.thing {
+    width: 250px;
+    height: 250px;
+    background-color: hsl(195,100%,80%);
+    border-radius: 15%;
+    float: right;
+    animation: myAnimation ease-in-out 3s;
+}
+
+.birb {
+    width: 500px;
+    height: 305px;
+    transform: rotateY(180deg);
+    background-image: url(https://pics.clipartpng.com/midle/Hummingbird_PNG_Clipart-500.png);
+    animation: birbImation 12s infinite;
+}
+
+.thing p {
+    margin: 10%;
+    font-weight: 100;
+    font-size: 125%;
+    color: ghostwhite;
+    text-overflow: clip;
+    text-shadow: .5px .2px 1.2px lightgray;
+}
+@keyframes birbImation {
+    0%{
+        
+    }
+    10%{
+        transform: scale(0.01,0.01);
+        transform: translate3d(-3vh,40vh,-5vh);
+    }
+    25%{
+        transform: scale(0.15,0.15);
+        transform: translate3d(5vh,4vh,-5vh);
+        transform: rotateY(180deg) none;
+    }
+    60%{
+        transform: scale(1.0,1.0);
+        transform: translate3d(25vh,50vh,-5vh);
+        transform: rotate(-65deg);
+    }
+}
+
+@keyframes myAnimation{
+    from{
+        width: 150px;
+        height: 150px;
+    }
+    to{
+        width: 250px;
+        height: 250px;
+    
+    }
+}
+
+.jumbotron-fluid {
+    /* background-image: linear-gradient(-10deg, cornflowerblue 40%,cornsilk 180%);*/
+    background-image: linear-gradient(to top, rgb(250, 181, 188) -20%, rgb(249,167,118) 0%, rgb(246,144,97)20%, rgb(244,120,87)80%,rgb(214,91,70)100%);
+    color: ghostwhite;
+    text-shadow: 1px 2px 3px teal;
+}
+
