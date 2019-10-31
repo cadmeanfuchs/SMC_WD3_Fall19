@@ -22,8 +22,8 @@
     height: 250px;
     background-color: hsl(195,100%,100%);
     border-style: solid;
-    border-width: 4px;
-    border-color: hsl(195,75%,80%);
+    border-width: 10px;
+    border-color: hsl(22, 95%, 65%);
     border-radius: 15%;
     float: right;
     animation: myAnimation ease-in-out 3s;
@@ -34,6 +34,8 @@
     height: 305px;
     transform: rotateY(180deg);
     background-image: url(https://pics.clipartpng.com/midle/Hummingbird_PNG_Clipart-500.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     animation: birbImation 12s infinite;
 }
 
@@ -45,23 +47,23 @@
     text-overflow: clip;
     text-shadow: .5px .2px 1.2px lightgray;
 }
+
 @keyframes birbImation {
-    0%{
-        
-    }
     10%{
-        transform: scale(0.01,0.01);
-        transform: translate3d(-3vh,40vh,-5vh);
+       transform: rotateY(180deg);
+       transform: translate3d(-3vh,40vh,-5vh);
+    }
+    15%{
+        transform: rotateY(180deg);
+        transform: translate3d(25vh,19vh,76vh);
     }
     25%{
-        transform: scale(0.15,0.15);
+        transform: rotateY(-180deg);
         transform: translate3d(5vh,4vh,-5vh);
-        transform: rotateY(180deg) none;
     }
-    60%{
-        transform: scale(1.0,1.0);
-        transform: translate3d(25vh,50vh,-5vh);
-        transform: rotate(-65deg);
+    50%{
+        transform: rotateY(90deg);
+        transform: translate3d(15vh,20vh,-5vh);
     }
 }
 
