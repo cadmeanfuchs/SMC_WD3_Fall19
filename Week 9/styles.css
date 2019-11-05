@@ -34,6 +34,27 @@
     animation: birbImation 12s infinite;
 }
 
+/*.flowerbed {
+    float: left;
+    width: 100vw;
+    position: fixed;
+    transform: translate(-5vh)
+}
+
+.flowerOne img {
+    width: 75vw;
+    transform: rotateY(-180deg) translate3d(-5vh,35vh,10vh);
+    float: right;
+}
+
+.flowerTwo img {
+    width: 25vw;
+}
+
+.flowerThree img{
+    width: 50vw;
+}*/
+
 .thing p {
     margin: 10%;
     font-weight: 100;
@@ -48,13 +69,13 @@
        transform: scale(1.8) translate3d(10%,10%,10%);
     }
     25%{
-        transform: scale(.4) rotateY(180deg) rotate(-10deg) translate3d(15vh,45vh,56vh);
+        transform: scale(.6) rotateY(180deg) rotate(-10deg) translate3d(15vh,25vh,46vh);
     }
     50%{
         transform: scale(1.2) rotateX(10deg) translate3d(25vh,20vh,-5vh);
     }
     75%{
-        transform: scale(.8) rotate(-35deg) translate3d(55vh,55vh,20vh);
+        transform: scale(.8) rotateY(180deg) rotate(-35deg) translate3d(-55vh,55vh,20vh);
     }
 }
 
