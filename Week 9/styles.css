@@ -29,13 +29,8 @@
     animation: myAnimation ease-in-out 3s;
 }
 
-.birb {
-    width: 500px;
-    height: 305px;
-    transform: rotateY(180deg);
-    background-image: url(https://pics.clipartpng.com/midle/Hummingbird_PNG_Clipart-500.png);
-    background-repeat: no-repeat;
-    background-size: cover;
+.birb img {
+    width: 30vw;
     animation: birbImation 12s infinite;
 }
 
@@ -49,21 +44,17 @@
 }
 
 @keyframes birbImation {
-    10%{
-       transform: rotateY(180deg);
-       transform: translate3d(-3vh,40vh,-5vh);
-    }
-    15%{
-        transform: rotateY(180deg);
-        transform: translate3d(25vh,19vh,76vh);
+    0%,100{
+       transform: scale(1.8) translate3d(10%,10%,10%);
     }
     25%{
-        transform: rotateY(-180deg);
-        transform: translate3d(5vh,4vh,-5vh);
+        transform: scale(.4) rotateY(180deg) rotate(-10deg) translate3d(15vh,45vh,56vh);
     }
     50%{
-        transform: rotateY(90deg);
-        transform: translate3d(15vh,20vh,-5vh);
+        transform: scale(1.2) rotateX(10deg) translate3d(25vh,20vh,-5vh);
+    }
+    75%{
+        transform: scale(.8) rotate(-35deg) translate3d(55vh,55vh,20vh);
     }
 }
 
