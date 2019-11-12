@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+<body>
+
+<p style="display: none;">Image to use:</p>
+<img id="scream" src="3285161.png" alt="The Scream" style="display: none;">
+<img id="flower" src="download.png" alt="flower power" style="display: none;">
+
+<div style="position: relative;">
+<canvas id="moonDrop" width="820" height="680" style="position: absolute; left: 0; top: 0; z-index: 0;"></canvas>
+<canvas id="myCanvas" width="250" height="300" style="position: absolute; left:0; top:0; z-index: 1; margin-left: 265px; margin-top: 430px;">Your browser does not support the HTML5 canvas tag.</canvas>
+<canvas id="textTronic" width="600" height="100" style="position: absolute; left: 0; top: 0; z-index: 2; margin-top: 60px; margin-left: 40px;"></canvas>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  moonDrop();
+  myCanvas();
+  textTronic();
+});
+
+function myCanvas() {
+  var c = document.getElementById("myCanvas");
+  var ctx = c.getContext("2d");
+  var img = document.getElementById("scream");
+  ctx.drawImage(img,0,0,250,250);
+}
+    
+function moonDrop() {
+  var d = document.getElementById("moonDrop");
+  var dtx = d.getContext("2d");
+  var imgTwo = document.getElementById("flower");
+  dtx.drawImage(imgTwo,0,0,820,680);
+}
+    
+function textTronic(){
+    var textas = document.getElementById("textTronic");
+    var txts = textas.getContext("2d");
+    txts.font = "56px Arial";
+    txts.fillStyle = "white";
+    txts.fillText("Soph's Life", 10, 50);
+}
+</script>
+
+</body>
+</html>

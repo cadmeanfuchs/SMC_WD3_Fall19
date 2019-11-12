@@ -1,0 +1,15 @@
+#myCanvas {
+    animation: foximate 12s infinite;
+}
+
+@keyframes foximate {
+    0%,100{
+       transform: scale(0.1);
+    }
+    28%{
+        transform: scale(1) rotateY(170deg) translate3d(-260px,0px,0px);
+    }
+    79%{
+        transform: scale(1) rotateY(170deg) translate3d(-260px,0px,0px);
+    }
+}
