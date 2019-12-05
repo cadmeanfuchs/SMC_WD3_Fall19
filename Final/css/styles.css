@@ -1,0 +1,31 @@
+* {
+    font-family: Upgrade;
+    color: #848484;
+}
+
+nav a {
+ color: floralwhite;
+ font-family: Parlance;
+ letter-spacing: 1px;
+ font-size: 13pt;
+}
+
+nav a:hover{
+ color: lightpink;
+}
+
+.jumbotron {
+    background: url(img/DesktopRebar-11.png) no-repeat center center local;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   background-size: cover;
+   -o-background-size: cover;
+   height: 100vh;
+}
+
+svg{
+    fill:#fff;
+}
+svg:hover{
+    fill:#ffb6c1;
+}
