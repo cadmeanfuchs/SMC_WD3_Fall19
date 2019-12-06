@@ -3,9 +3,18 @@
     color: #848484;
 }
 
+@font-face {
+    font-family: 'parlanceregular';
+    src: url('parlance-webfont.woff2') format('woff2'),
+         url('parlance-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 nav a {
  color: floralwhite;
- font-family: Parlance;
+ font-family: parlanceregular;
  letter-spacing: 1px;
  font-size: 13pt;
 }
@@ -23,9 +32,18 @@ nav a:hover{
    height: 100vh;
 }
 
+#c {
+    width: 35%;
+    height: 70%;
+}
+
 svg{
     fill:#fff;
 }
 svg:hover{
     fill:#ffb6c1;
+}
+
+.embed-responsive-item {
+    padding-top: -300%;
 }
