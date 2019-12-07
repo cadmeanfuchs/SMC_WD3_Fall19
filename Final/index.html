@@ -45,15 +45,15 @@
     </nav>
     
     
-    <div class="jumbotron jumbotron-fluid responsive" style="background-image: url(img/DesktopRebar-11.png); align-content: center;">   <canvas id="c" style="margin-left: 32.5%;"></canvas>
-    </div>
+<canvas id="c" style="background-image: url(img/Background-14.png); align-content: center; z-index: -1;"></canvas>
+
     
     <div class="container">
     <div class="row" style="margin-bottom: 10%;">
         <div class="col-sm col-md-3">
         </div>
         <div class="col-sm col-md-6">
-            <p style="padding: 6%;">Welcome down here, friendo!  I'm Soph, a brilliant designer, and you're on my site.<br><br>Home for me is in Los Angeles, though you may think I live on a cloud.  Never fear.  You'll find my solutions very grounded, just with a little wit and irreverence sprinkled atop.</p>
+            <p style="padding: 6%;">Welcome down here, friendo!  Nice job getting around the   I'm Soph, a brilliant designer, and you're on my site.<br><br>Home for me is in Los Angeles, though you may think I live on a cloud.  Never fear.  You'll find my solutions very grounded, just with a little wit and irreverence sprinkled atop.</p>
         </div>
         <div class="col-sm col-md-3">
         </div>
@@ -76,8 +76,8 @@
         
         function main() {
           const canvas = document.querySelector('#c');
-          const renderer = new THREE.WebGLRenderer({canvas},{alpha :true});
-
+          const renderer = new THREE.WebGLRenderer({canvas, alpha:true, antialias:true});
+          
           const fov = 45;
           const aspect = 2;  // the canvas default
           const near = 0.1;
@@ -90,7 +90,7 @@
           controls.update();
 
           const scene = new THREE.Scene();
-          scene.background = new THREE.Color(null);
+          
 
           {
             const planeSize = 40;
@@ -114,18 +114,25 @@
           }
 
           {
-            const skyColor = 0xB1E1FF;  // light blue
-            const groundColor = 0xB97A20;  // brownish orange
-            const intensity = 1;
+            const skyColor = 0xAAEEFF;  // light blue
+            const groundColor = 0xffffff;  // brownish orange
+            const intensity = 1.1;
             const light = new THREE.HemisphereLight(skyColor, groundColor, intensity);
             scene.add(light);
           }
+            
+            {
+            const color = 0xff6464;
+            const intensity = .25;
+            const light = new THREE.AmbientLight(color, intensity);
+            scene.add(light);
+            }
 
           {
             const color = 0xFFFFFF;
-            const intensity = 1;
+            const intensity = .95;
             const light = new THREE.DirectionalLight(color, intensity);
-            light.position.set(5, 10, 2);
+            light.position.set(7, 5, 7);
             scene.add(light);
             scene.add(light.target);
           }
@@ -134,26 +141,27 @@
             const objLoader = new OBJLoader2();
               objLoader.load('./img/UFExtrusion.obj', (root) => {
                 scene.add(root);
-                      // compute the box that contains all the stuff
-    // from root and below
+
+                  
     const box = new THREE.Box3().setFromObject(root);
- 
     const boxSize = box.getSize(new THREE.Vector3()).length();
     const boxCenter = box.getCenter(new THREE.Vector3());
- 
-    // set the camera to frame the box
     frameArea(boxSize * 1.2, boxSize, boxCenter, camera);
- 
-    // update the Trackball controls to handle the new size
     controls.maxDistance = boxSize * 10;
     controls.target.copy(boxCenter);
     controls.update();
+            
+                  
+            var texture2 = new THREE.TextureLoader().load( './img/tri_pattern.jpg' );
+            texture2.wrapS = THREE.RepeatWrapping;
+            texture2.wrapT = THREE.RepeatWrapping;
+            texture2.repeat.set( 4, 4 );
               });
             
           }
             
             function frameArea(sizeToFitOnScreen, boxSize, boxCenter, camera) {
-              const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.5;
+              const halfSizeToFitOnScreen = sizeToFitOnScreen * 0.75;
               const halfFovY = THREE.Math.degToRad(camera.fov * .5);
               const distance = halfSizeToFitOnScreen / Math.tan(halfFovY);
 
