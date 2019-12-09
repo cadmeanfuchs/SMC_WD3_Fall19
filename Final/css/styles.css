@@ -9,7 +9,10 @@
          url('parlance-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
+}
 
+a:hover{
+    text-decoration: none;
 }
 
 nav a {
@@ -49,6 +52,71 @@ svg:hover{
     fill:#ffb6c1;
 }
 
+.tryer {
+  border: 5px solid transparent;
+  background: #AED6D1;
+  color: #55706D;
+  border-radius: 40px;
+  padding: 5%;
+  overflow: hidden;
+  width: 40%;
+  margin: 2.5%;
+  transition: 
+    all        .9s,
+    border     0.3s .9s,
+    box-shadow 0.3s 1.1s;
+  white-space: nowrap;
+  text-align: center;
+    font-weight: bold;
+}
+
+.tryer:hover {
+    background: #55706D;
+    color: #FFE8A3;
+    width: 45%;
+    border: 10px solid #8DCCC4;
+      box-shadow: 3px 3px 2px rgba(black, 0.15);
+}
+
+.buyer{
+  border: 5px solid transparent;
+  background: #ffAAB8;
+  color: #884A4A;
+  border-radius: 40px;
+  padding: 5%;
+  overflow: hidden;
+  width: 40%;
+  margin: 2.5%;
+  transition: 
+    all        .9s,
+    border     0.3s .9s,
+    box-shadow 0.3s 1.1s;
+  white-space: nowrap;
+  text-align: center;
+    font-weight: bold; 
+}
+
+.buyer:hover{
+    background: #DD88A7;
+    color: #FFEFAD;
+    width: 45%;
+    border: 10px solid #ffAAB8;
+    box-shadow: 3px 3px 2px rgba(black, 0.15);
+}
+
 .embed-responsive-item {
     padding-top: -300%;
+}
+
+#socialInline{
+    display: none;
+}
+
+@media only screen and (max-width: 768px) {
+    #socialFixed {
+        display: none;
+    }
+    #socialInline {
+        display: flex;
+    }
 }
