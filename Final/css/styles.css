@@ -95,7 +95,9 @@ svg:hover{
   text-align: center;
     font-weight: bold; 
 }
-
+.mobilizer{
+    margin-bottom: 8%;
+}
 .buyer:hover{
     background: #DD88A7;
     color: #FFEFAD;
@@ -118,5 +120,9 @@ svg:hover{
     }
     #socialInline {
         display: flex;
+    }
+    
+    .mobilizer {
+        margin-bottom: 35%;
     }
 }
