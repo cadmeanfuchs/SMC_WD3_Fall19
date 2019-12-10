@@ -19,7 +19,7 @@
       classProductQuantity: 'my-product-quantity',
       classProductRemove: 'my-product-remove',
       classCheckoutCart: 'my-cart-checkout',
-      affixCartIcon: true,
+      affixCartIcon: false,
       showCheckoutModal: true,
       numberOfDecimals: 2,
       cartItems: null,
@@ -33,7 +33,8 @@
         return null;
       }
     };
-
+     
+           
 
     var loadOptions = function (customOptions) {
       _options = $.extend({}, DEFAULT_OPTIONS);
@@ -213,6 +214,7 @@
     $cartBadge.text(ProductManager.getTotalQuantity());
 
     if (!$("#" + idCartModal).length) {
+        
       $('body').append(
         '<div class="modal fade" id="' + idCartModal + '" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">' +
         '<div class="modal-dialog" role="document">' +
@@ -226,7 +228,7 @@
         '</div>' +
         '<div class="modal-footer">' +
         '<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>' +
-        '<button type="button" class="btn btn-primary ' + classCheckoutCart + '">Checkout</button>' +
+        '<button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#checkoutModal" ' + classCheckoutCart + '">Checkout</button>' +
         '</div>' +
         '</div>' +
         '</div>' +
@@ -384,6 +386,8 @@
     loadMyCartEvent(this.selector);
     return this;
   };
+    
+
 
 
 })(jQuery);
